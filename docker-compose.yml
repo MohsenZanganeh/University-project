@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    container_name: 'node-test'
+    image: node:latest
+    build: .
+    command: npm start
+    volumes: 
+      - '.:/app'
+    ports: 
+      - "6543:6543"
